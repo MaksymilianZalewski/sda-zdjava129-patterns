@@ -1,6 +1,6 @@
 package pl.sdacademy.java.patterns;
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
 
@@ -16,10 +16,10 @@ class StudentBuilderTest {
                 .build();
 
         //then
-        Assertions.assertThat(student).isNotNull();
-        Assertions.assertThat(student.getGroupCode()).isEqualTo("4a");
-        Assertions.assertThat(student.getPerson().getFirstName()).isEqualTo("Jan");
-        Assertions.assertThat(student.getPerson().getLastName()).isEqualTo("Kowalski");
+        assertThat(student).isNotNull();
+        assertThat(student.getGroupCode()).isEqualTo("4a");
+        assertThat(student.getPerson().getFirstName()).isEqualTo("Jan");
+        assertThat(student.getPerson().getLastName()).isEqualTo("Kowalski");
 
     }
 }
